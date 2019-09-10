@@ -6,7 +6,7 @@ number = random.randint(-10000, 10000)
 mod = abs(number) % 10
 
 if number < 0:
-   mod *= -1
+    mod *= -1
 
 if mod > 5:
     str = "greater than 5"
