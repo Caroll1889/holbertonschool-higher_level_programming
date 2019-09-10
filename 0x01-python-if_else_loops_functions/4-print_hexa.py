@@ -3,5 +3,5 @@
 i = 0
 
 while i < 99:
-    print(i, "=", hex(i))
+    print("{} = {}".format(i, hex(i)))
     i = i + 1
