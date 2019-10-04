@@ -2,6 +2,11 @@
 
 
 def matrix_divided(matrix, div):
+    """Function that divides all elements of a matrix
+    matrix is  list of lists of integers or floats
+    div is a integer and greater or equal than 0
+    the function must return a new matrix
+    """
 
     new_matrix = []
 
