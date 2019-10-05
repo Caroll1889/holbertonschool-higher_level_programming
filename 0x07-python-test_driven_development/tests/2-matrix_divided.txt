@@ -2,13 +2,12 @@
 ======================
 
 Using ``matrix_divided``
-----------------------
+---------------------
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now use it:
 
-# A matrix empty
-
+# A matrix empty:
 >>> matrix_divided([], 3)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
@@ -16,34 +15,34 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 ---------------------------------------------------------------------------
 
-# A matrix with a string
+# A matrix with a string:
 
->>>  matrix_divided matrix([['a', 2, 3],[4, 5, 6]], 3)
+>>> matrix_divided matrix([['a', 2, 3],[4, 5, 6]], 3)
  Traceback (most recent call last):
- TypeError: matrix must be a matrix of integers/floats
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 ---------------------------------------------------------------------------
 
-# div equal to 0
+# div equal to 0:
 
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
 Traceback (most recent call last):
-ZeroDivisionError: division by 0 
+ZeroDivisionError: division by zero
 
 
 ---------------------------------------------------------------------------
 
-# Matrix os strings
+# Matrix os strings:
 
->>> matrix_divided([“hi”, “hello”], 3)
-Traceback (most recent call last)
+>>> matrix_divided(["h", "hello"], 3)
+Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 ---------------------------------------------------------------------------
 
-# division
+# division:
 
 >>> matrix_divided([[1,2,3]], 3)
 [[0.33, 0.67, 1.0]]
@@ -51,7 +50,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 ---------------------------------------------------------------------------
 
-# division
+# division:
 
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
 [[0.33, 0,67, 1.0], [1.33, 1.67, 2.0]]
@@ -59,13 +58,16 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 --------------------------------------------------------------------------
 
-# empty lists inside of the matrix  
+# empty lists inside of the matrix:
 
 >>> matrix_divided([[]], 3)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+
 --------------------------------------------------------------------------
+
+# division with a list longer than other:
 
 >>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3)
 Traceback (most recent call last):
