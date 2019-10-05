@@ -19,4 +19,9 @@ def add_integer(a, b=98):
         a = int(a)
     if type(b) == float:
         b = int(b)
+
+    if a > 1e100:
+        raise OverflowError
+    if b > 1e100:
+        raise OverflowError
     return int(a) + int(b)
