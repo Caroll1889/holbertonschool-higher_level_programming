@@ -40,7 +40,7 @@ Now use it:
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    8. first name
+    8. only first name
     >>> say_my_name("Caroll")
-    My name is Caroll
+    My name is Caroll 
 
