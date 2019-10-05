@@ -10,16 +10,10 @@ import ``add_integer`` from the ``0-add_integer`` module:
 
 
 -----------------------------------------------------------
+
 # Adding if a != int and a != float:
 
 >>> add_integer('hola', 5)
-Traceback (most recent call last):
-TypeError: a must be an integer
-
-
------------------------------------------------------------
-
->>> add_integer('a', 2)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
@@ -55,13 +49,6 @@ TypeError: b must be an integer
 
 -----------------------------------------------------------
 
->>> add_integer(2, 'a')
-Traceback (most recent call last):
-TypeError: b must be an integer
-
-
------------------------------------------------------------
-
 # No arguments:
 >>> add_integer()
 Traceback (most recent call last):
@@ -78,7 +65,6 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 -----------------------------------------------------------
 
 # Adding if b == (-):
-
 >>> add_integer(4, -8)
 -4
 
