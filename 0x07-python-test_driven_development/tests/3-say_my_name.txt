@@ -1,0 +1,42 @@
+name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    1. first_name - last_name
+    >>> say_my_name("Caroll", "Hudgson")
+    My name is Caroll Hudgson
+
+    2. no parameters
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    3. arguments > 2
+    >>> say_my_name("Joan", "Stella", "Diahan")
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+    4. first name != str
+    >>> say_my_name(8, "John")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    5. last name != str
+    >>> say_my_name("Daniela", 45)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    6. long string
+    >>> say_my_name("leooooooooooooo", "Martinez")
+    My name is leooooooooooooo Martinez
+
+    7. first name and last name == list
+    >>> say_my_name(["Caroll"], ["Hudgson"])
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
