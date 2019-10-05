@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""Module "adds"
+module that adds two integers or
+raise an error
+>>> add_integer(2, 4)
+8
+"""
+
 
 
 def add_integer(a, b=98):
