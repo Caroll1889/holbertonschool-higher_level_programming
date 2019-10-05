@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""module that print a name"""
 
 
 def say_my_name(first_name, last_name=""):
@@ -11,4 +12,4 @@ def say_my_name(first_name, last_name=""):
     if type(last_name) != str:
         raise TypeError("last_name must be a string")
 
-    print("My name in {:s} {:s}".format(first_name, last_name))
+    print("My name is {} {}".format(first_name, last_name))
