@@ -87,9 +87,8 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 # matrix 
 
->>> matrix_divided([3], 3)
+>>> matrix_divided([[3]], 3)
 [[1.0]]
-[[3]]
 
 
 ----------------------------------------------------------------------------
