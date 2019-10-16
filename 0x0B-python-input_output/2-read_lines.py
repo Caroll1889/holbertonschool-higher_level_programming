@@ -7,6 +7,7 @@ def read_lines(filename="", nb_lines=0):
 
         if nb_lines > 0:
             for i in range(nb_lines):
-                print(file.readline(), end="")
+                dc = file.readline()
+                print(dc, end="")
         else:
-            print(file.read())
+            print(file.read(), end="")
