@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-from models.base import Base
 """class inherits from Base """
+from models.base import Base
 
 
 class Rectangle(Base):
-    """constructor """
+    """class"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -14,10 +15,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """property"""
         return self.__width
-
+        
     @width.setter
     def width(self, value):
+        """setter"""
         if type(value) != int:  # chequear si es un entero o no
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -26,10 +29,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """property"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """setter"""
         if type(value) != int:  # chequear si es un entero o no
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -38,10 +43,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """"property"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """setter"""
         if type(value) != int:  # chequear si es un entero o no
             raise TypeError("x must be an integer")
         if value < 0:
@@ -50,10 +57,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """property"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """setter"""
         if type(value) != int:  # chequear si es un entero o no
             raise TypeError("y must be an integer")
         if value < 0:
@@ -80,6 +89,7 @@ class Rectangle(Base):
                                                         self.__height))
 
     def update(self, *args, **kwargs):
+        """assign an argument to each attribute"""
         for i, arg in enumerate(args):
             if i == 0:
                 self.id = arg
