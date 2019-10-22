@@ -30,12 +30,13 @@ class Base:
         cont = " "
         new_list = []
 
-        for a in list_objs:
+        with open(file_n, "w", encoding='utf-8') as file
+        if list_objs is None:
+            file.write(cls.to_json_string([])
+        else:
+            for a in list_objs:
             new_list.append(a.to_dictionary())
         cont = cls.to_json_string(new_list)
-
-        with open(file_n, "w", encoding='utf-8') as file:
-            file.write(cont)
 
     @staticmethod
     def from_json_string(json_string):
@@ -58,7 +59,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         filename = cls.__name__ + ".json"
-        if os.path.exists(filename):
-            return
-        else:
+        try:
+            with open(filename, encoding="utf-8") as file:
+                content = file.read()
+                data = cls.from_json_string(content)
+            lst = []
+            for i in data:
+                lst.append(cls.create(**i))
+            return lst
+        except FileNotFoundError:
             return []
