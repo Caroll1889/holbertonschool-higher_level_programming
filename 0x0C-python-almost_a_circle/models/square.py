@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """class inherits from rectangle"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """constructor """
+
     def __init__(self, size, x=0, y=0, id=None):
         """Inheriting from rectangle"""
         super().__init__(size, size, x, y, id)
@@ -16,14 +16,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """property"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """setter"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """assign attributes"""
         for i, arg in enumerate(args):
             if i == 0:
                 self.id = arg
