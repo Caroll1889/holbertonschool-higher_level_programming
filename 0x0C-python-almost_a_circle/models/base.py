@@ -5,7 +5,7 @@ import json
 class Base:
     """private class attribute """
     __nb_objects = 0
-    
+
     """constructor """
     def __init__(self, id=None):
 
@@ -18,7 +18,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        if list_dictionaries == None:
+        if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -49,7 +49,7 @@ class Base:
             new = cls(1)
 
         if cls.__name__ == "Rectangle":
-            new = cls(1,1)
+            new = cls(1, 1)
 
         new.update(**dictionary)
         return new
@@ -58,6 +58,6 @@ class Base:
     def load_from_file(cls):
         filename = cls.__name__ + ".json"
         if os.path.exists(filename):
-            return 
+            return
         else:
             return []
