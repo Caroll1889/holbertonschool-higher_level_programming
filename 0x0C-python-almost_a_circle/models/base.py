@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""model Base"""
 import json
 
 
@@ -6,8 +7,9 @@ class Base:
     """private class attribute """
     __nb_objects = 0
 
-    """constructor """
+    
     def __init__(self, id=None):
+        """constructor"""
 
         if id is not None:
             self.id = id
@@ -46,10 +48,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Square":
-            new = cls(1)
+            new = cls(1, 0, 0)
 
         if cls.__name__ == "Rectangle":
-            new = cls(1, 1)
+            new = cls(1, 1, 0, 0)
 
         new.update(**dictionary)
         return new
