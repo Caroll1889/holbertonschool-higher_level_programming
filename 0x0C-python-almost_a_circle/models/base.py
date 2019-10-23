@@ -78,7 +78,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """writes the JSON string representation"""
-        file_n = cls.__name__ + ".cvs"
+        file_n = cls.__name__ + ".csv"
         new_list = []
 
         with open(file_n, "w", encoding='utf-8') as file:
@@ -92,7 +92,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        filename = cls.__name__ + ".cvs"
+        filename = cls.__name__ + ".csv"
         try:
             with open(filename, encoding="utf-8") as file:
                 content = file.read()
