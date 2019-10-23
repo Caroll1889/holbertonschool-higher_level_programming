@@ -23,7 +23,7 @@ class TestSquare(unittest.TestCase):
         """ Test for an empty instantiation. """
         with self.assertRaises(TypeError):
             s1 = Square()
-            
+
     def test_more_arguments(self):
         """ Test for an instantiation with 1 more argument. """
         with self.assertRaises(TypeError):
