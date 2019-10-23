@@ -19,6 +19,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """returns the JSON string representation"""
         if list_dictionaries is None:
             return "[]"
         else:
@@ -41,6 +42,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """return the list of the JSON string representation"""
         if json_string is None or json_string == []:
             return []
         else:
@@ -48,6 +50,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """return an instancewith all attributes"""
         if cls.__name__ == "Square":
             new = cls(1, 0, 0)
 
@@ -59,7 +62,37 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """return a list of instance"""
         filename = cls.__name__ + ".json"
+        try:
+            with open(filename, encoding="utf-8") as file:
+                content = file.read()
+                data = cls.from_json_string(content)
+            lst = []
+            for i in data:
+                lst.append(cls.create(**i))
+            return lst
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes the JSON string representation"""
+        file_n = cls.__name__ + ".cvs"
+        new_list = []
+
+        with open(file_n, "w", encoding='utf-8') as file:
+            if list_objs is None:
+                file.write(cls.to_json_string([]))
+            else:
+                for a in list_objs:
+                    new_list.append(a.to_dictionary())
+                cont = cls.to_json_string(new_list)
+                file.write(cont)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".cvs"
         try:
             with open(filename, encoding="utf-8") as file:
                 content = file.read()
