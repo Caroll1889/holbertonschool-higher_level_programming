@@ -2,13 +2,14 @@
 """
 Unit test for the Rectangle class
 """
- 
+
 import unittest
 import json
 import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+
 
 class TestRectangle(unittest.TestCase):
     """
@@ -34,7 +35,7 @@ class TestRectangle(unittest.TestCase):
         Testing docstring
         """
         self.assertIsNotNone(Rectangle.__doc__)
-                                         
+
     def test_documentation(self):
         """
         Test to see if documentation is correct and created
@@ -143,7 +144,7 @@ class TestRectangle(unittest.TestCase):
             Rectangle(-10, 2)
             Rectangle(0, 2)
             Rectangle(height=2)
-                                                  
+
     def test_rectangle_ValueError_height(self):
         """
         Testing the ValueError with the height argument
@@ -152,10 +153,11 @@ class TestRectangle(unittest.TestCase):
             Rectangle(10, -2)
             Rectangle(10, 0)
             Rectangle(width=2)
+
     def test_rectangle_ValueError_x(self):
         """
         Testing the ValueError with the x argument
-        """                                     
+        """
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(10, 2, -1)
             Rectangle(10, 2, -100)
