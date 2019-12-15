@@ -10,7 +10,8 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name = %(name)s ORDER BY id ASC", {'name': argv[4]})
+    cur.execute("SELECT * FROM states WHERE name = %(name)s ORDER BY \
+    id ASC", {'name': argv[4]})
     res = cur.fetchall()
 
     for row in res:
