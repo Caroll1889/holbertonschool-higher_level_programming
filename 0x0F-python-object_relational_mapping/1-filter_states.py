@@ -14,6 +14,7 @@ if __name__ == "__main__":
     res = cur.fetchall()
 
     for row in res:
-        print(row)
+        if row [1][0] == 'N':
+            print(row)
     cur.close()    
     db.close()
