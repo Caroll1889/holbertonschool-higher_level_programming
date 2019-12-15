@@ -15,4 +15,5 @@ if __name__ == "__main__":
 
     for row in res:
         print(row)
+    cur.close()    
     db.close()
