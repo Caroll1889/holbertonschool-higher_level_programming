@@ -1,3 +1,3 @@
 #!/bin/bash
 #script that takes in a URL, and displays the body of the response
-curl -sfLX DELETE "$1"
+curl -sL DELETE "$1"
