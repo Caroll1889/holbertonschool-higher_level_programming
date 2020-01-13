@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Python script that fetches https://intranet.hbtn.io/status
+# Python script that fetches https://intranet.hbtn.io/status
 
 from urllib.request import urlopen
 
@@ -9,6 +9,6 @@ if __name__ == "__main__":
         html = resp.read()
         enc = html.decode()
     print('Body response:')
-    print('    - type:', (type(html)))
-    print('    - content:', html)
-    print('    - utf8 content:', enc)
+    print('\t- type:', (type(html)))
+    print('\t- content:', html)
+    print('\t- utf8 content:', enc)
