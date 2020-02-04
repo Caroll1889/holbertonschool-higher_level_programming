@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-var p =
+const p =
 `C is fun
 Python is cool
 Javascript is amazing`;
