@@ -3,14 +3,13 @@
 const request = require('request');
 const url = 'https://jsonplaceholder.typicode.com/todos';
 
-request(url, (err, response, body) => {
+request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   }
 
   const dict = {};
   const data = JSON.parse(body);
-  console.log(data);
   for (const task of data) {
     if (task.completed === true) {
       dict[task.userId] = 0;
