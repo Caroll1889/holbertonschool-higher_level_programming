@@ -8,6 +8,10 @@ request(MyArgv[0], function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    fs.writeFile(MyArgv[1], body, 'utf8', error => { });
+    fs.writeFile(MyArgv[1], body, 'utf8', function (err) {
+      if (err) {
+        return console.log(err)
+      }
+    })
   }
 });
