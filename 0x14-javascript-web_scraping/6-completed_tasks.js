@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
 const request = require('request');
-const url = 'https://jsonplaceholder.typicode.com/todos';
+const url = process.argv.slice(2) 
 
-request(url, function (err, response, body) {
+request(url[0], function (err, response, body) {
   if (err) {
     console.log(err);
   }
